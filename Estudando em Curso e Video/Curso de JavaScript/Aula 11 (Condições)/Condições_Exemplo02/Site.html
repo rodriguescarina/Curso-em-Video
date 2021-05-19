@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>What is your nationality?</h1>
+    I'm from: <input type="text" name="country" id="country">
+    <input type="button" value="check" onclick=check()>
+    <br>
+    <div id="result"> </div>
+
+    <script>
+        function check() {
+            var txtCountry = window.document.getElementById("country").value
+            var result = window.document.getElementById("result");
+
+            result.innerHTML = "Atualmente você mora no " + txtCountry + ",";
+            
+            if(txtCountry != 'brasil') {
+                result.innerHTML += " você é <strong>Estrangeiro!</strong>"
+
+            } else {
+                result.innerHTML += "você é <strong> Brasileiro! </strong>"
+            }
+
+        }
+    </script>
+    
+</body>
+</html>
